@@ -1,25 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Item ({img, id, titulo, descripcion, precio}) {
+function Item ({img, id, titulo, precio}) {
 
     return(  
-        <div id="card" className="col col-md-3">
-            <div className="card" style={{width: '18rem'}}>
+        <div id="card" className='col'>
+            <div className="card p-3" style={{height: '430px', width: '18rem', color: '#f3f2fo'}}>
                 <Link to={`/item/${id}`}>
                 <img src={img} className="card-img-top" alt="imagen del producto"/>
                 </Link>
                 <div className="card-body">
-                    <h5 className="card-title" style={{color: '#98a287'}}>
+                    <h5 className="card-title" style={{color: '#8f8e8c'}}>
                         {titulo}
                     </h5>
-                    <p className="card-text" style={{color: '#98a287'}}>
-                        {id}
-                    </p>
-                    <p className="card-text" style={{color: '#98a287'}}>
-                        {descripcion}
-                    </p>
-                    <p className="card-text" style={{color: '#98a287'}}>
+                    <p className="card-text" style={{color: '#8f8e8c'}}>
                        ${precio}
                     </p>
                 </div>

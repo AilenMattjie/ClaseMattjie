@@ -6,16 +6,18 @@ function ItemList ({items}) {
     return(
         <div className="container">
             <div className="row">
+                
                 {items.map((item, index)=>
                     <>
                         <Item key={index} 
                         img={item.img} 
                         id={item.id} 
                         titulo={item.titulo} 
-                        descripcion={item.descripcion} 
+                    
                         precio={item.precio}/>
                     </>
                  )}
+                
             </div>
         </div>
     )

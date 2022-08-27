@@ -13,7 +13,7 @@ const Navbar = ()=> {
                         <a className="nav-link dropdown-toggle titles" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Productos</a>
                             <ul className="dropdown-menu titles">
                                 {DropdownItem.map((item, index) => (
-                                    <li><a className="dropdown-item titles" href="#" key={index}>{item}</a></li>
+                                    <li key={index}><a className="dropdown-item titles" href="#" >{item}</a></li>
                                 ))} 
                             </ul>
                     </li>
