@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
+import Carousel from "../carousel/carousel.jsx/Carousel";
 
 function ItemListContainer ({greeting}) {
 
@@ -71,6 +72,7 @@ function ItemListContainer ({greeting}) {
 
     return(
         <div id="main">
+            <Carousel/>
             <span> {greeting}</span>
             <ItemList items={items}/>
             <ItemCount stock={8} initial={1} onAdd={onAdd}/>
