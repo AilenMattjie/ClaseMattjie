@@ -13,6 +13,7 @@ import Cocina from './components/Category/Cocina';
 import Deco from './components/Category/Deco';
 import Guardado from './components/Category/Guardado';
 import Infantil from './components/Category/Infantil';
+import Productos from './components/Category/Productos';
 
 function App() {
   return (
@@ -22,10 +23,7 @@ function App() {
     <Routes>
       <Route path='/' element={<ItemListContainer greeting="Bienvenido a Vigue, confecciones textiles"/>}/>
       <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-      <Route path='/productos/cocina' element={<Cocina/>}/>
-      <Route path='/productos/deco' element={<Deco/>}/>
-      <Route path='/productos/guardado' element={<Guardado/>}/>
-      <Route path='/productos/infantil' element={<Infantil/>}/>
+      <Route path='/category/:categoryid' element={<ItemDetailContainer/>}/>
     </Routes>
     </BrowserRouter>
     </div>
@@ -33,5 +31,7 @@ function App() {
 }
 
 export default App;
+
+
 
 

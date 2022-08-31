@@ -2,7 +2,7 @@ import React from 'react';
 import CartWidget from '../cartWidget/CartWidget';
 import './Navbar.css';
 import Carousel from '../carousel/carousel.jsx/Carousel';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Cocina from '../Category/Cocina';
 import Guardado from '../Category/Guardado';
 import Infantil from '../Category/Infantil';
@@ -15,16 +15,16 @@ const Navbar = ()=> {
                 <div className="container-fluid">
                     <ul className="nav nav-pills">
                         <li className="nav-item ">
-                            <p className='nav-link titles'>{<NavLink to={'/productos'} style={{color: '#e5bdb3'}}>Productos</NavLink>}</p>
+                            <Link to={'/productos'} style={{color: '#e5bdb3'}}><p className='nav-link titles'>Productos</p></Link>
                         </li>
                         <li className="nav-item ">
-                            <p className='nav-link titles'>{<NavLink to={'/nosotros'} style={{color: '#e5bdb3'}}>Nosotros</NavLink>}</p>
+                        <Link to={'/nosotros'} style={{color: '#e5bdb3'}}><p className='nav-link titles'>Nosotros</p></Link>
                         </li>
                         <li className="nav-item ">
-                            <p className="nav-link titles">{<NavLink to={'/contacto'} style={{color: '#e5bdb3'}}>Contacto</NavLink>}</p>   
+                        <Link to={'/contacto'} style={{color: '#e5bdb3'}}><p className="nav-link titles">Contacto</p></Link> 
                         </li> 
                         <li className='nav-item'>
-                            <p className='nav-link titles'>{<NavLink to={'/cartwidget'} style={{color: '#e5bdb3'}}>{<CartWidget/>}</NavLink>}</p>
+                        <Link to={'/cartwidget'} style={{color: '#e5bdb3'}}><CartWidget/></Link>
                         </li>  
                     </ul>
                 </div>

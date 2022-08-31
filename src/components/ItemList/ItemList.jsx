@@ -8,14 +8,13 @@ function ItemList ({items}) {
             <div className="row">
                 
                 {items.map((item, index)=>
-                    <>
-                        <Item key={index} 
+                    <div key={index} >
+                         <Item 
                         img={item.img} 
                         id={item.id} 
                         titulo={item.titulo} 
-                    
                         precio={item.precio}/>
-                    </>
+                    </div>
                  )}
                 
             </div>

@@ -12,14 +12,14 @@ const ItemCount = ({stock, initial , onAdd}) => {
         setCount (count - 1)
     };
 
-    return() => {
+    return(
         <>
-            <a href="#" className= 'btn btn-primary' onClick={ restarUnidad}> - </a>
+            <button href="#" className= 'btn btn-primary' onClick={ restarUnidad}> - </button>
             <p className="card-text"> {initial} </p>
-            <a href="#" className= 'btn btn-primary' onClick={sumarUnidad}> + </a>
-            <a href="#" className= 'btn btn-primary' onClick={onAdd}>Comprar</a>
+            <button href="#" className= 'btn btn-primary' onClick={sumarUnidad}> + </button>
+            <button href="#" className= 'btn btn-primary' onClick={onAdd}>Comprar</button>
         </>
-    }
+    )
 }
 
 export default ItemCount
