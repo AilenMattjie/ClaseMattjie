@@ -24,6 +24,7 @@ function App() {
       <Route path='/' element={<ItemListContainer greeting="Bienvenido a Vigue, confecciones textiles"/>}/>
       <Route path='/item/:id' element={<ItemDetailContainer/>}/>
       <Route path='/category/:categoryid' element={<ItemDetailContainer/>}/>
+      <Route path='/cart'/>
     </Routes>
     </BrowserRouter>
     </div>
