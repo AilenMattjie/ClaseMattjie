@@ -23,6 +23,7 @@ function CartProvider({children}){
     }
 
     function removeItem(itemId){
+        setItems(itemId.filter((el)=> el.id == itemId));
         //filter
     }
 
@@ -36,7 +37,7 @@ function CartProvider({children}){
     function isInCart(itemId){
         //es un helper, nos ayuda a saber si hay algo en el carrito
         if(!!items){
-            return items.some((el)=> el.id == itemId);
+            return items.find((el)=> el.id == itemId);
         }else{
             return false
         }
