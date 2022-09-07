@@ -1,16 +1,21 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import ItemCount from "../../ItemCount/ItemCount";
-import {useState} from 'react';
 import {Link} from 'react-router-dom';
+import { CartContext } from "../../../context/CartContext";
 
 function ItemDetail ({item}){
     const {img, id, titulo, descripcion, precio} =item;
     //desestructuro el item que viene por props
 
+    const {addItem} = useContext(CartContext);
+    //importo el contexto y traigo la propiedad addItem
+
     const [count, setCount] = useState(0);
 
     function onAdd (counter){
+        console.log(`Cantidad de items que el cliente va a comprar ${counter}`);
         setCount(counter);
+        addItem(item, counter);
     }
 
 
@@ -34,7 +39,7 @@ function ItemDetail ({item}){
                     <p className="card-text" style={{color: '#cbccbe'}}>
                        ${precio}
                     </p>
-                    {counter !== 0 ?
+                    {count !== 0 ?
                         <Link to = '/cart'>
                             <button>Finalizar compra</button>
                         </Link>:

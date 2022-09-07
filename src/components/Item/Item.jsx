@@ -16,7 +16,6 @@ function Item ({img, id, titulo, precio}) {
                     <p className="card-text" style={{color: '#8f8e8c'}}>
                        ${precio}
                     </p>
-                    <ItemCount initial={1} stock={8} onAdd={onAdd}/>
                 </div>
             </div>
         </div>
@@ -24,3 +23,4 @@ function Item ({img, id, titulo, precio}) {
 }
 
 export default Item 
+//<ItemCount initial={1} stock={8} onAdd={onAdd}/>

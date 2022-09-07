@@ -3,10 +3,7 @@ import CartWidget from '../cartWidget/CartWidget';
 import './Navbar.css';
 import Carousel from '../carousel/carousel.jsx/Carousel';
 import {Link} from 'react-router-dom';
-import Cocina from '../Category/Cocina';
-import Guardado from '../Category/Guardado';
-import Infantil from '../Category/Infantil';
-import Deco from '../Category/Deco';
+
 
 const Navbar = ()=> {    
     return (

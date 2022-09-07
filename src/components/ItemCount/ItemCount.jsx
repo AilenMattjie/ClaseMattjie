@@ -15,7 +15,7 @@ const ItemCount = ({stock, initial , onAdd}) => {
     return(
         <>
             <button href="#" className= 'btn btn-primary' onClick={ restarUnidad}> - </button>
-            <p className="card-text"> {initial} </p>
+            <p className="card-text"> {count} </p>
             <button href="#" className= 'btn btn-primary' onClick={sumarUnidad}> + </button>
             <button href="#" className= 'btn btn-primary' onClick={onAdd}>Comprar</button>
         </>

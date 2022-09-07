@@ -122,7 +122,7 @@ function ItemListContainer ({greeting}) {
                 resolve (arrProductos)
             }, 2000)      
         }).then ((data)=>{
-            if( categoryid === undefined){
+            if( categoryid !== undefined){
                 setItems(
                     data.filter((item)=> item.category == categoryid)
                 );
