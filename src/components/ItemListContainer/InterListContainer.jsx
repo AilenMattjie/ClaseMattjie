@@ -116,7 +116,7 @@ function ItemListContainer ({greeting}) {
                 category: 'infantil'
             }
         ]
-
+       
         new Promise((resolve, reject)=> {
             setTimeout(()=> {
                 resolve (arrProductos)

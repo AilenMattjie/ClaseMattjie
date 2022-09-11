@@ -10,11 +10,11 @@ function CartProvider({children}){
         if(isInCart(item.id)){
             let aux = item;
             // copia del array
-            let ItemIndex = aux.indexOf((el)=> el.id == item.id);
+            let ItemIndex = aux.findIndex((el)=> el.id == item.id);
             // agarra el index de donde pertenecia ese prod que esta duplicado
             aux[ItemIndex].quantity += quantity;
             //aumenta solamente la cantidad y la suma a la anterior
-            setItems(...aux)
+            setItems([...aux])
             // con el spreed (...) digo que es un array nuevo
         }else{
             setItems([...items,{...item, quantity}]);
@@ -23,7 +23,7 @@ function CartProvider({children}){
     }
 
     function removeItem(itemId){
-        setItems(itemId.filter((el)=> el.id == itemId));
+        setItems(itemId.filter((el)=> el.id != itemId));
         //filter
     }
 
@@ -36,11 +36,7 @@ function CartProvider({children}){
 
     function isInCart(itemId){
         //es un helper, nos ayuda a saber si hay algo en el carrito
-        if(!!items){
-            return items.find((el)=> el.id == itemId);
-        }else{
-            return false
-        }
+        return items.find((el)=> el.id == itemId);
     }
 
     return(
